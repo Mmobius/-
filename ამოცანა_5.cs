@@ -7,28 +7,35 @@
 
 using System;
 
-public class Program {
-    public static void Main() {
+public class Program 
+{
+    public static void Main() 
+    {
         Console.WriteLine(Steps.CountVariants(0));
     }
 }
 
-public static class Steps {
 
-    static long PiNotation(int firstFactor, int lastFactor) {
+public static class Steps 
+{
+    static long PiNotation(int firstFactor, int lastFactor) 
+    {
         /*
           როცა firstFactor=1 და lasFactor=n მაშინ PiNotation=n!
         */
 
         long piNotation = 1;
-        for (int f = firstFactor; f <= lastFactor; f++) {
+        for (int f = firstFactor; f <= lastFactor; f++) 
+        {
             piNotation *= f;
         }
 
         return piNotation;
     }
 
-    static long Combination(int n, int k) {
+  
+    static long Combination(int n, int k) 
+    {
         /*
           C(n,k)=n!/k!*(n-k)!
           შევკვეცოთ მნიშვნელის თანამამრავლიდან უდიდესზე
@@ -41,13 +48,19 @@ public static class Steps {
         return PiNotation(max + 1, n) / PiNotation(1, min);
     }
 
-    public static long CountVariants(int steps) {
+  
+    public static long CountVariants(int steps) 
+    {
         long variants = 1;
 
-        if (steps <= 0) {
+        if (steps <= 0) 
+        {
             throw new IndexOutOfRangeException("საფეხურები რაოდენობა მეტი უნდა იყოს 0-ზე");
-        } else {
-            for (int r = 1; r <= steps / 2; r++) {
+        } 
+        else 
+        {
+            for (int r = 1; r <= steps / 2; r++) 
+            {
                 variants += Combination(steps - r, r);
             }
         }
