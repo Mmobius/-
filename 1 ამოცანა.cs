@@ -1,13 +1,14 @@
+/*
+        დაწერეთ ფუნქცია 
+        რომელსაც გადაემეცემა ტექსტი  და აბრუნებს პალინდრომია თუ არა. 
+        (პალინდრომი არის ტექსტი რომელიც ერთნაირად იკითხება ორივე მხრიდან)
+*/
 using System;
 using System.Collections.Generic;
 
 public class Program {
     public static void Main() {
-        /*
-        დაწერეთ ფუნქცია 
-        რომელსაც გადაემეცემა ტექსტი  და აბრუნებს პალინდრომია თუ არა. 
-        (პალინდრომი არის ტექსტი რომელიც ერთნაირად იკითხება ორივე მხრიდან)
-        */
+        
         string firsText = "Red rum, sir, is murder";
         string secondText = "Was it a cat I saw?";
 
