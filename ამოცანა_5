@@ -1,3 +1,9 @@
+/*
+  გვაქვს n სართულიანი კიბე, 
+  ერთ მოქმედებაში შეგვიძლია ავიდეთ 1 ან 2 საფეხურით. 
+  დაწერეთ ფუნქცია 
+  რომელიც დაითვლის n სართულზე ასვლის ვარიანტების რაოდენობას.
+*/
 using System;
 
 public class Program
@@ -14,6 +20,10 @@ public static class Steps
 
     static long PiNotation(int firstFactor, int lastFactor)
     {
+        /*
+          როცა firstFactor=1 და lasFactor=n მაშინ PiNotation=n!
+        */
+        
         long piNotation = 1;
         for (int f = firstFactor; f <= lastFactor; f++)
         {
@@ -25,10 +35,12 @@ public static class Steps
 
     static long Combination(int n, int k)
     {
-        //C(n,k)=n!/k!*(n-k)!
-        //შეგვიძლია მრიცხველი შევკვეცოთ მნიშვნელის თანამამრავლიდან უდიდესზე
-        //ამით დროს მოვიგებთ.
-        // C(n,k)=[(n-k+1)*(n-k+2)*...*n]/k!
+        /*
+          C(n,k)=n!/k!*(n-k)!
+          შევკვეცოთ მნიშვნელის თანამამრავლიდან უდიდესზე
+          ამით დროს მოვიგებთ.
+          მივიღებთ: C(n,k)=[(n-k+1)*(n-k+2)*...*n]/k!
+        */
         int min = Math.Min(n - k, k);
         int max = Math.Max(n - k, k);
 
@@ -45,11 +57,6 @@ public static class Steps
         } 
         else 
         {
-            //გვაქვს n საფეხური 
-            //ვარიანტების გამოსათვლელად ვიყენებთ შემდეგ ფორმულას
-            //variants=C(n,0)+C(n-1,1)+C(n-2,2)+..+C(n-r,r)
-            //სადაც r=n/2		
-
             for (int r = 1; r <= steps / 2; r++)
             {
                 variants += Combination(steps - r, r);
