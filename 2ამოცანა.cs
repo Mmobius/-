@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 public class Program {
     public static void Main() {
-        var x = MinSplit(156);
+        var x = MinSplit(196);
 
         for (int i = 0; i < x.Count; i++) {
             Console.WriteLine(x[i]);
