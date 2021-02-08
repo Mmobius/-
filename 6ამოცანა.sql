@@ -1,10 +1,10 @@
 /*-----------------------------------------მოსწავლეები---*/
 CREATE TABLE Pupil (
   PupilID integer PRIMARY KEY, 
-  FirstName varchar(25) NOT NULL, 
-  LastName varchar(255) NOT NULL, 
-  Gender Nvarchar(50), 
-  Class Nvarchar(50)
+  FirstName nvarchar(50) NOT NULL, 
+  LastName nvarchar(50) NOT NULL, 
+  Gender nvarchar(50), 
+  Class nvarchar(50)
 );
 INSERT INTO `Pupil` (
   `PupilID`, `FirstName`, `LastName`, 
@@ -2350,12 +2350,12 @@ VALUES
 /*-------------------------------ᲙᲚᲐᲡᲔᲑᲘ--*/
 CREATE TABLE Class_5A (
   PupilID integer, 
-  FirstName varchar(50) NOT NULL, 
-  LastName varchar(50) NOT NULL, 
+  FirstName nvarchar(50) NOT NULL, 
+  LastName nvarchar(50) NOT NULL, 
   Gender nvarchar(50), 
   ClassID varchar(20)
 );
-INSERT INTO Class_5A(
+INSERT INTO Class_5A n
   PupilID, FirstName, LastName, Gender, 
   ClassID
 ) 
@@ -2371,9 +2371,9 @@ WHERE
   Class = '5ა';
 CREATE TABLE Class_5B (
   PupilID integer, 
-  FirstName varchar(50) NOT NULL, 
-  LastName varchar(50) NOT NULL, 
-  Gender Nvarchar(50)
+  FirstName nvarchar(50) NOT NULL, 
+  LastName nvarchar(50) NOT NULL, 
+  Gender  nvarchar(50)
 );
 INSERT INTO Class_5B(
   PupilID, FirstName, LastName, Gender
@@ -2389,9 +2389,9 @@ WHERE
   Class = '5ბ';
 CREATE TABLE Class_5G (
   PupilID integer, 
-  FirstName varchar(50) NOT NULL, 
-  LastName varchar(50) NOT NULL, 
-  Gender Nvarchar(50)
+  FirstName nvarchar(50) NOT NULL, 
+  LastName nvarchar(50) NOT NULL, 
+  Gender  nvarchar(50)
 );
 INSERT INTO Class_5G(
   PupilID, FirstName, LastName, Gender
@@ -2407,9 +2407,9 @@ WHERE
   Class = '5გ';
 CREATE TABLE Class_6A (
   PupilID integer, 
-  FirstName varchar(50) NOT NULL, 
-  LastName varchar(50) NOT NULL, 
-  Gender Nvarchar(50)
+  FirstName nvarchar(50) NOT NULL, 
+  LastName nvarchar(50) NOT NULL, 
+  Gender  nvarchar(50)
 );
 INSERT INTO Class_5A(
   PupilID, FirstName, LastName, Gender
@@ -2425,8 +2425,8 @@ WHERE
   Class = '6ა';
 CREATE TABLE Class_6B (
   PupilID integer, 
-  FirstName varchar(50) NOT NULL, 
-  LastName varchar(50) NOT NULL, 
+  FirstName nvarchar(50) NOT NULL, 
+  LastName nvarchar(50) NOT NULL, 
   Gender Nvarchar(50)
 );
 INSERT INTO Class_6B(
@@ -2577,8 +2577,4 @@ CREATE TABLE TEACHERS_CLASS (
 INSERT INTO TEACHERS_CLASS(
   TeacherID, FirstName, LastName, ClassID
 ) 
-VALUES 
-  (
-    5949915, 'დოდო', 'ნეფარიძე', 
-    
-  );
+
