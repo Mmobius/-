@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 public class Program {
     public static void Main() {
-        bool text = IsProperly(")()()())");
+        bool text = IsProperly("())()");
         Console.WriteLine(text);
 
     }
